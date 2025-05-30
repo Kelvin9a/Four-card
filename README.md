@@ -17,6 +17,6 @@ Thanks for checking out this front-end coding challenge.
    Deployed my project with GitHub Pages
 
 ## Links to socials
-- [GitHub Pages](https://pages.github.com/)
+- [Live solution](https://kelvin9a.github.io/Four-card/)
 - . Tweet [@frontendmentor](https://twitter.com/frontendmentor)
 - . Tweet [@Obiofweb3](https://x.com/Obiofweb)
