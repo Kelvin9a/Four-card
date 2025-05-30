@@ -1,0 +1,282 @@
+/* A morden css reset for my styling */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin and padding */
+  * {
+    margin: 0;
+    padding: 0;
+
+  }
+  
+  /* 3. Enable keyword animations */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      interpolate-size: allow-keywords;
+    }
+  }
+  
+  body {
+    /* 4. Add accessible line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 6. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 7. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 8. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 9. Improve line wrapping */
+   p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  :root{
+     /* Primary colors */
+    --Red: hsl(0, 78%, 62%);
+   --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+     /* Neutral colors */
+    --Grey500: hsl(234, 12%, 34%);
+    --Grey400: hsl(212, 6%, 44%);
+    --White: hsl(0, 0%, 100%);
+    --font-family: "Poppins", sans-serif;
+    --fontweight1:200;
+    --fontweight2:400;
+    --fontweight3:600;
+  }
+ 
+
+ body{
+  font-family: var(--font-family);
+ }
+
+ p{
+  color: var(--Grey400);
+  font-weight: var(--fontweight2);
+ }
+  
+ h2{
+  font-size: 1.3rem;
+  color: var(--Grey500);
+  font-weight: var(--fontweight3);
+ }
+  
+ .header-wrapper{
+  width: 370px;
+  margin: auto;
+  padding: 1px 20px; 
+  position: relative;
+   top: 45px;
+    text-align: center;
+ }
+
+   /*Header styling*/
+
+ .hero-section{
+    font-size: 1.5rem;
+ }
+
+ #line1-header-text{
+    color: var(--Grey400);
+    font-weight: var(--fontweight2);
+ }
+
+ #line1-header-text2{
+  font-weight: var(--fontweight3);
+  color: var(--Grey500);
+ }
+ 
+ .Header-paragraph-text{
+   padding-top: 20px;
+   color: var(--Grey400);
+ }
+   
+  /*card styling*/
+
+ .Card-container{
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto;
+    grid-template-areas: "header-wrapper"
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    ;  
+    margin: 35px auto;
+    padding: 20px 20px;
+     width: 370px; 
+    height: auto;
+    grid-gap:2rem;
+    
+ }
+ 
+ 
+ .mobile-br{
+  display: none;
+ }
+
+
+ .card1{
+   grid-area: card1;
+    padding: 20px 25px;
+    border-top: 5px solid var(--Cyan);
+    box-shadow: 0px 8px 18px 3px rgba(76, 78, 97, 0.253);
+    height: 250px;
+    border-radius: 5px 5px 5px 5px;
+ }
+
+  #card1-image{
+      padding-top: 35px;
+      float: right;
+  }
+
+ .card2{
+     grid-area: card2;
+   padding: 20px 25px;
+  border-top: 5px solid var(--Red);
+  box-shadow: 0px 8px 18px 3px  rgba(76, 78, 97, 0.253);
+   height: 250px;
+   border-radius: 5px 5px 5px 5px;
+ }
+
+  #card2-image{
+      padding-top: 35px;
+      float: right;
+  }
+
+ .card3{
+     grid-area: card3;
+    padding: 20px 25px;
+   border-top: 5px solid var(--Orange);
+     box-shadow: 0px 8px 18px 3px  rgba(76, 78, 97, 0.253);
+     height: 250px;
+     border-radius: 5px 5px 5px 5px;
+ }
+
+  #card3-image{
+      padding-top: 35px;
+      float: right;
+  }
+
+ .card4{
+     grid-area: card4;
+   padding: 20px 25px;
+   border-top: 5px solid var(--Blue);
+    box-shadow: 0px 8px 18px 3px  rgba(76, 78, 97, 0.253);
+    height: 250px;
+    border-radius: 5px 5px 5px 5px;
+ }  
+
+  #card4-image{
+      padding-top: 35px;
+      float: right;
+  }
+  
+ 
+ 
+
+@media (min-width:700px){
+      body{
+      display: grid;
+      place-items: center;
+    }
+
+
+   .header-wrapper{
+        margin: 30px auto;
+        padding: 20px 20px;
+        width: fit-content;
+  }
+
+    .Card-container{
+      display: grid;
+      grid-template-columns: repeat(4 , 1fr) ;
+      /* grid-template-rows:3, (1fr) ; */
+      grid-template-areas: ". card1 card1 ."
+    "card2 card2 card3 card3"
+    ". card4 card4 ."
+    ;
+    width: 768px;
+    margin: 35px auto;
+    padding: 20px 20px;
+
+  }
+
+    .desktop-br{
+    display: none;
+  } 
+
+    .mobile-br{
+    display: inline;
+   } 
+
+   #mobile-b{
+    display: none;
+   }
+}
+
+ @media (min-width:1000px){
+    body{
+      display: grid;
+      place-items: center;
+    }
+
+    p{
+      font-size: 13px;
+    }
+      .header-wrapper{
+        margin: 30px auto;
+        padding: 20px 20px;
+        width: fit-content;
+  }
+
+   .hero-section{
+    font-size: 1.9rem;
+ }
+
+  
+ 
+  .desktop-br{
+    display: none;
+  }
+
+  .mobile-br{
+    display: inline;
+  }
+     .Card-container{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows:4, (1fr) ;
+      grid-template-areas: ". card2 ."
+    "card1 card2 card4"
+    "card1 card3 card4"
+    ". card3 .";
+    width: 1094px;
+    margin: 35px auto;
+    padding: 20px 20px;
+
+  }
+  
+  
+}
