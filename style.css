@@ -236,7 +236,7 @@
    }
 }
 
- @media (min-width:1000px){
+ @media (min-width:992px){
     body{
       display: grid;
       place-items: center;
